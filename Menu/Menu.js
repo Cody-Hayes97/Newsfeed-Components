@@ -48,8 +48,10 @@ function menuMaker(items) {
   menuCard.classList.add("menu");
 
   const menuButton = document.querySelector(".menu-button");
+
   menuButton.addEventListener("click", e => {
     menuCard.classList.toggle("menu--open");
+    TweenMax.from(menuCard, 1, { left: -400 }).to(menuCard, 1, { left: 400 });
   });
 
   return menuCard;
